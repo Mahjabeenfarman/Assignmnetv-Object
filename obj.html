@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    </title>
+</head>
+<body style="background-color: aquamarine;">
+   
+    
+<h1 style="color: blue;"><u>Mahajabeen Kanwal <br>
+    Assignment # 5 Java Script<br> Objects
+    </u>
+</h1>
+
+    <script>
+// 1. Suppose You have an array of object
+// var itemsArray = [
+// {name:”juice”,price:”50”, quantity:”3”},
+// {name:”cookie”,price:”30”, quantity:”9”},
+// {name:”shirt”,price:”880”, quantity:”1”},
+// {name:”pen”,price:”100”, quantity:”2”}];
+// Calculate total price of each item and all items;
+
+var itemsArray = [
+    {name: "juice", price: "50", quantity: "3"},
+    {name: "cookie", price: "30", quantity: "9"},
+    {name: "shirt", price: "880", quantity: "1"},
+    {name: "pen", price: "100", quantity: "2"}
+];
+
+let totalPrice = 0;
+
+itemsArray.forEach(item => {
+    // Convert price and quantity from string to number
+    let price = Number(item.price);
+    let quantity = Number(item.quantity);
+    
+    // Calculate total price for the item
+    let itemTotal = price * quantity;
+    
+    // Add item total to overall total
+    totalPrice += itemTotal;
+    
+    // Output item total
+    console.log(`Total price of ${item.name}: ${itemTotal}`);
+});
+
+// Output overall total price
+console.log(`Total price of all items: ${totalPrice}`);
+
+
+
+// 2. Create an object with properties name, email, password, age,
+// gender, city, country.
+// Check if age and country properties exist in object or not.
+// Also check firstName and lastName properties in object.
+
+
+// Create the object
+var user = {
+    name: "John Doe",
+    email: "john.doe@example.com",
+    password: "securepassword",
+    age: 30,
+    gender: "male",
+    city: "New York",
+    country: "USA"
+};
+
+// Check if 'age' and 'country' properties exist
+if ('age' in user) {
+    console.log("Age property exists.");
+} else {
+    console.log("Age property does not exist.");
+}
+
+if ('country' in user) {
+    console.log("Country property exists.");
+} else {
+    console.log("Country property does not exist.");
+}
+
+// Check for 'firstName' and 'lastName' properties
+if ('firstName' in user) {
+    console.log("First name property exists.");
+} else {
+    console.log("First name property does not exist.");
+}
+
+if ('lastName' in user) {
+    console.log("Last name property exists.");
+} else {
+    console.log("Last name property does not exist.");
+}
+
+// 3. Create a constructor function with some properties. Now
+// create multiple records using the constructor.
+// 4. Suppose you want to check population of your area, their
+// educations and professions.
+// Create a constructor function which holds following 
+// properties:
+// Name, gender, address, education, profession,
+// Enter all records one by one.
+// Hint:
+//  use select box for education and profession,
+//  use radio box for gender
+// Bonus : use can use localStorage to save records.
+
+    </script>
+</body>
+</html>
